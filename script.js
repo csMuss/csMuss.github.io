@@ -1,17 +1,13 @@
-var button = document.getElementById("btn");
-var inputWindowOne = prompt("Please enter varible 1 and 2","1:","2:");
-var input1;
-var input2;
-var output;
+const num1 = parseInt(prompt('Enter the first number '));
+const num2 = parseInt(prompt('Enter the second number '));
 
-function click(){
-    document.getElementById("dateBox").innerHTML = Date();
-}
+const sum = num1 + num2;
 
-function add(){
-    output = input1 + input2;
-    return output;
-}
+
+document.write(sum);
+
+
+
 
 
 
