@@ -6,20 +6,22 @@
     <body>
         <h1>
             <center>
-             <label for="n1">First Number:</label>
-             <input type="number" id="n1" name="n1">
+             <label id="ph">Player Hand: </label>
+             <!-- <input type="number" id="n1" name="n1"> -->
                 <br>
-             <label for="n2">Second Number:</label>
-             <input type="number" id="n2" name="n2">
+             <label id="dh">Dealer Hand: </label>
+            <!-- <input type="number" id="n2" name="n2"> -->
                 <br>
-             <button onclick="userClick()">Submit</button>
-                
+            
+             <button onclick="userHit()">Hit</button>
+             <button onclick="userStand()">Stand</button>
+             <button onclick="newGame()">New Game</button>
             </center>
         </h1>
         
         <p1>
             <center>
-                <p id="sum"></p>
+                <p id="status"></p>
             </center>
         </p1>
     </body>
