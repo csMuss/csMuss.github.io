@@ -9,6 +9,7 @@ var dealerHand = 0;
 var playerHand = 0;
 var cardMap = new Map();
 var cardMapDealer = new Map();
+var isGameOver = false;
 
 cardMap.set('A', 1);
 cardMap.set('2', 2);
@@ -50,15 +51,22 @@ function getRandomKeyDealer(collection) {
 }
 
 function userHit(){
-    
-    var x = getRandomKey(cardMap);
-    //console.log("              Player Key: " + x);
-    var y = cardMap.get(x);
-    //console.log("Player Value: " + y);
+    if(isGameOver == false){
+        if(playerHand < 22){
+            var x = getRandomKey(cardMap);
+            //console.log("              Player Key: " + x);
+            var y = cardMap.get(x);
+            //console.log("Player Value: " + y);
 
-    playerHand += y;
-    console.log("Player Hand: " + playerHand);
-    document.getElementById("ph").innerHTML = "Player Hand: " + playerHand;
+            playerHand += y;
+            console.log("Player Hand: " + playerHand);
+            document.getElementById("ph").innerHTML = "Player Hand: " + playerHand;
+        }
+        if(playerHand >= 22){
+            document.getElementById("status").innerHTML = "You lose!";
+            isGameOver = true;
+        }
+    }
 }
 
 function dealerHit(){
@@ -86,22 +94,28 @@ function userStand(){
         if(playerHand == dealerHand){
             document.getElementById("status").innerHTML = "You tie!";
             console.log("Con1");
+            isGameOver = true;
         }else if(playerHand > dealerHand){
             document.getElementById("status").innerHTML = "You won!";
             console.log("Con2");
+            isGameOver = true;
         }else if(playerHand > dealerHand || (playerHand < dealerHand && dealerHand > winningNum)){
             document.getElementById("status").innerHTML = "You win!";
             console.log("Con3");
+            isGameOver = true;
         }else{
             document.getElementById("status").innerHTML = "You lose!";
             console.log("Con4");
+            isGameOver = true;
         }
     }else if(playerHand > winningNum){
         document.getElementById("status").innerHTML = "You lose!";
         console.log("Con5");
+        isGameOver = true;
     }else{
         document.getElementById("status").innerHTML = "You won!";
         console.log("Con6");
+        isGameOver = true;
     }
 }
 
