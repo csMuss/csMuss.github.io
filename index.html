@@ -2,12 +2,6 @@
 <head>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-    <script>
-        function playAudio() {
-            var audio = new Audio('https://www.youtube.com/embed/L3D9ZSQ4AfY?autoplay=1&mute=0');
-            audio.play();
-        }
-    </script>
 </head>
 <body>
     <!-- Adding the GIF at the top of the page -->
@@ -25,9 +19,11 @@
         </center>
     </p1>
 
-    <!-- Button to play audio -->
-    <center><button onclick="playAudio()">Play Audio</button></center>
-    
+    <!-- Embedding the YouTube video -->
+    <center>
+        <iframe width="30" height="15" src="https://www.youtube.com/embed/L3D9ZSQ4AfY?controls=0&autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </center>
+
     <!-- Adding the GIF at the bottom of the page -->
     <center><img src="https://res.cloudinary.com/codier/image/upload/c_scale,w_235/iai0p5j9cuszzpqxdmws" alt="Loading"></center>
 </body>
