@@ -8,10 +8,26 @@
             background-image: url('https://artfiles.alphacoders.com/114/114615.jpg');
             background-size: cover; /* Cover the entire page */
             background-position: center; /* Center the background image */
+            margin: 0; /* Remove default margin */
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .white-square {
+            background-color: white; /* Set background color to white */
+            width: 100%; /* Full width of the viewport */
+            height: 100%; /* Full height of the viewport */
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1; /* Ensure it stays behind other content */
         }
     </style>
 </head>
 <body>
+    <div class="white-square"></div> <!-- White square covering the body -->
+    
     <!-- Adding the GIF at the top of the page -->
     <center><img src="https://res.cloudinary.com/codier/image/upload/c_scale,w_235/iai0p5j9cuszzpqxdmws" alt="Loading"></center>
     
@@ -29,7 +45,7 @@
 
     <!-- Embedding the YouTube video -->
     <center>
-        <iframe width="45" height="25" src="https://www.youtube.com/embed/L3D9ZSQ4AfY?controls=0&autoplay=1&mute=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/L3D9ZSQ4AfY?controls=0&autoplay=1&mute=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </center>
 
     <!-- Adding the GIF at the bottom of the page -->
